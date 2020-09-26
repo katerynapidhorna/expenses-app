@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import { Route, Switch } from "react-router-dom";
 import Expenses from "./pages/Expenses";
 import CreateExpense from "./pages/CreateExpense";
+import Data from "./data";
 
 function App() {
+  useEffect(() => {
+    localStorage.setItem("data", JSON.stringify(Data));
+  }, []);
+
   return (
     <div className="App">
       <Switch>

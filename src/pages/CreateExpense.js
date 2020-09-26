@@ -1,5 +1,20 @@
 import React from "react";
-console.log(localStorage.getItem("data"));
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import * as Icons from "@fortawesome/free-solid-svg-icons";
+
 export default function CreateExpense() {
-  return <div>Create expense</div>;
+  const data = JSON.parse(localStorage.getItem("data"));
+  console.log(data);
+  return (
+    <div>
+      {data.category.map((item, i) => {
+        return (
+          <div key={i}>
+            <FontAwesomeIcon icon={Icons[`${item.icon}`]} />
+          </div>
+        );
+      })}
+    </div>
+  );
 }
