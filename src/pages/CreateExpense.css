@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+  width: 60%;
+}
+
+.container div {
+  position: relative;
+  display: table;
+  box-shadow: 0 0 3px #333;
+  border-radius: 3px;
+  grid-column: span 2;
+  margin: 1em;
+  height: 6em;
+  width: 6em;
+}
+
+.container div a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.container div span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.i {
+  font-size: 2em;
+  color: #541212;
+}
