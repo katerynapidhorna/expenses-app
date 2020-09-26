@@ -1,0 +1,68 @@
+.nav {
+  display: flex;
+  background-color: aliceblue;
+  border-bottom: 1px solid #333;
+}
+
+.nav a,
+.nav a:link,
+.nav a:active,
+.nav a:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav a {
+  padding: 1.5em;
+}
+
+.nav span {
+  margin-right: 40px;
+  padding: 1.5em;
+}
+
+.nav a:hover,
+.nav span:hover {
+  background-color: #00000070;
+}
+
+.list-container {
+  position: relative;
+  padding: 1em;
+}
+
+.list-container:hover .list {
+  display: block;
+}
+
+.list {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 51px;
+  list-style-type: none;
+  background-color: aliceblue;
+  padding-left: 0;
+  box-shadow: 0 0 1px #333;
+  z-index: 1;
+}
+
+.list li {
+  position: relative;
+  width: 100px;
+  padding: 2em;
+}
+
+.list li a {
+  position: absolute;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.list li:hover {
+  background-color: #00000070;
+}
