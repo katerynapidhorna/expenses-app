@@ -12,7 +12,7 @@ export default function CreateExpense() {
     <div className="container">
       {data.category.map((item, i) => {
         return (
-          <div key={i} style={{ "background-color": `${item.color}` }}>
+          <div key={i} style={{ backgroundColor: `${item.color}` }}>
             <span>
               <Link to={`/new-expense/${item.id}`} />
               <FontAwesomeIcon className="i" icon={Icons[`${item.icon}`]} />

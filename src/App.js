@@ -10,7 +10,9 @@ import NewExpense from "./components/NewExpense";
 
 function App() {
   useEffect(() => {
-    localStorage.setItem("data", JSON.stringify(Data));
+    if (!localStorage.getItem("data")) {
+      localStorage.setItem("data", JSON.stringify(Data));
+    }
   }, []);
 
   return (
@@ -20,7 +22,7 @@ function App() {
         <Route exact path="/" component={LandingPage} />
         <Route path="/expenses" component={Expenses} />
         <Route path="/create-expense" component={CreateExpense} />
-        <Route path="/new-expense" component={NewExpense} />
+        <Route path="/new-expense/:id" component={NewExpense} />
       </Switch>
     </div>
   );
