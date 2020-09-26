@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Accordion } from "react-bootstrap";
 import { useParams, useHistory } from "react-router-dom";
 import Data, { category } from "../data";
 
